@@ -26,7 +26,7 @@ class Section extends Component {
                 <li>Neutral</li>
                 <li>Bad</li>
                 <li>Total</li>
-                <li>Positive Feedback</li>
+                <li>Positive feedback</li>
             </ul>
         </div>
       </div>
