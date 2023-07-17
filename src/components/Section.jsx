@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class Section extends Component {
+export class Section extends Component {
   state = { isOpen: false };
 
   toggle = () => {
