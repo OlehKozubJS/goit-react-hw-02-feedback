@@ -13,8 +13,16 @@ class Section extends Component {
 
     return (
       <div>
-        <h1>Please leave feedback</h1>
-        
+        <div>
+            <h2>Please leave feedback</h2>
+            <button>Good</button>
+            <button>Neutral</button>
+            <button>Bad</button>
+        </div>
+        <div>
+            <h2>Statistics</h2>
+            
+        </div>
       </div>
     );
   }
