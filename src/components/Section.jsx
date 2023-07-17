@@ -13,8 +13,8 @@ class Section extends Component {
 
     return (
       <div>
-        <button onClick={this.toggle}>{isOpen ? "Hide" : "Show"}</button>
-        {isOpen && children}
+        <h1>Please leave feedback</h1>
+        
       </div>
     );
   }
