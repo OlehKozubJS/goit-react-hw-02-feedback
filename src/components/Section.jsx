@@ -13,7 +13,7 @@ export class Section extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const { children } = this.props;
+    
 
     return (
       <div>
