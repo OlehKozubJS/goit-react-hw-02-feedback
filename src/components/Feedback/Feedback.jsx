@@ -43,6 +43,6 @@ export class Feedback extends Component {
                     <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />
                 </Section>
             </div>
-      );
+        );
     }
-  }
+}
