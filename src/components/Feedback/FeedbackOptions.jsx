@@ -15,7 +15,6 @@ export class FeedbackOptions extends Component {
     }
 }
 
-
 FeedbackOptions.propTypes = {
     options: propTypes.arrayOf(propTypes.string.isRequired).isRequired,
     onLeaveFeedback: propTypes.func.isRequired
