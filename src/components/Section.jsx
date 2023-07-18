@@ -17,7 +17,7 @@ export class Section extends Component {
   };
   
   countPositiveFeedbackPercentage = () => {
-    const sum = this.countTotalFeedback;
+    const sum = this.countTotalFeedback();
     return Math.floor(this.state.good / sum * 100);
   };
 
