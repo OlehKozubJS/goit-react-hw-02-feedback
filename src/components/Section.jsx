@@ -1,7 +1,11 @@
 import { Component } from "react";
 
 export class Section extends Component {
-  state = { isOpen: false };
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0
+  }
 
   toggle = () => {
     this.setState(state => ({ isOpen: !state.isOpen }));
