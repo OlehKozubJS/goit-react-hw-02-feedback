@@ -19,9 +19,9 @@ export class Section extends Component {
       <div>
         <div>
             <h2>Please leave feedback</h2>
-            <button>Good</button>
-            <button>Neutral</button>
-            <button>Bad</button>
+            <button onClick={}>Good</button>
+            <button onClick={}>Neutral</button>
+            <button onClick={}>Bad</button>
         </div>
         <div>
             <h2>Statistics</h2>
