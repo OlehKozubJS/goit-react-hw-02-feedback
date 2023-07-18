@@ -44,6 +44,7 @@ export class Feedback extends Component {
   
                 <Section title="Statistics">
                     {
+                    this.countTotalFeedback() === 0 ?
                     <Notification message="There is no feedback" />
                     :
                     <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />
