@@ -13,4 +13,4 @@ export class FeedbackOptions extends Component {
             </div>
         )
     }
-  }
+}
