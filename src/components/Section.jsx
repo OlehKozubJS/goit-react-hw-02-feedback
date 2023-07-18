@@ -33,7 +33,6 @@ export class Feedback extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-
       <div>
         <Section title="Please leave feedback">
           <FeedbackOptions options={["Good", "Bad", "Neutral"]} onLeaveFeedback={this.changeStatistics} />
