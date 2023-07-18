@@ -10,7 +10,7 @@ export class Section extends Component {
   addGood = () => this.setState(state => ({good: state.good + 1}));
   addNeutral = () => this.setState(state => ({neutral: state.neutral + 1}));
   addBad = () => this.setState(state => ({bad: state.bad + 1}));
-    
+      
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
