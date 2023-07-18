@@ -21,10 +21,6 @@ export class Section extends Component {
     return Math.floor(this.state.good / sum * 100);
   };
 
-  toggle = () => {
-    this.setState(state => ({ isOpen: !state.isOpen }));
-  };
-
   render() {
     const { good, neutral, bad } = this.state;
 
