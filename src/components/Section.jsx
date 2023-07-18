@@ -40,9 +40,7 @@ export class Section extends Component {
       <div>
         <div onClick={this.changeStatistics}>
             <h2>Please leave feedback</h2>
-            <button className="GoodButton">Good</button>
-            <button className="NeutralButton">Neutral</button>
-            <button className="BadButton">Bad</button>
+            <FeedbackOptions options={["Good", "Bad", "Neutral"]} onLeaveFeedback={this.changeStatistics} />
         </div>
         <div>
             <h2>Statistics</h2>
@@ -66,6 +64,28 @@ export class Statistics extends Component {
         <li>Positive feedback: {positivePercentage}%</li>
       </ul>
     );
+  }
+}
+
+export class FeedbackOptions extends Component {
+  state = {
+    optionButtons: []
+  };
+
+  constructor(props, state) {
+    super(props, state);
+    this.setState({optionButtons: this.props.options.map(option => <button className={option.replaceAll(" ", "") + "Button"}>{option}</button>)});
+  }
+
+  render() {
+    const { onLeaveFeedback } = this.props;
+    const { optionButtons } = this.state;
+
+    return (
+      <div onClick={onLeaveFeedback}>
+        {optionButtons}
+      </div>
+    )
   }
 }
 
