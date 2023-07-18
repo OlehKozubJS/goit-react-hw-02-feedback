@@ -18,11 +18,7 @@ export class Section extends Component {
       this.setState({bad: this.state.bad + 1});
     }
   }
-/*
-  addGood = () => this.setState(state => ({good: state.good + 1}));
-  addNeutral = () => this.setState(state => ({neutral: state.neutral + 1}));
-  addBad = () => this.setState(state => ({bad: state.bad + 1}));
-*/
+
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
@@ -75,12 +71,9 @@ export class FeedbackOptions extends Component {
   }
 
   render() {
-    //const { onLeaveFeedback } = this.props;
-    const { optionButtons } = this.state;
-
     return (
       <div onClick={this.props.onLeaveFeedback}>
-        {optionButtons}
+        {this.state.optionButtons}
       </div>
     )
   }
