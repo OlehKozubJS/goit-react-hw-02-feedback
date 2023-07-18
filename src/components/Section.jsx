@@ -33,16 +33,15 @@ export class Feedback extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <div>
-        <div>
-            <h2>Please leave feedback</h2>
 
-            <FeedbackOptions options={["Good", "Bad", "Neutral"]} onLeaveFeedback={this.changeStatistics} />
-        </div>
-        <div>
-            <h2>Statistics</h2>
-            <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />
-        </div>
+      <div>
+        <Section title="Please leave feedback">
+          <FeedbackOptions options={["Good", "Bad", "Neutral"]} onLeaveFeedback={this.changeStatistics} />
+        </Section>
+
+        <Section title="Statistics">
+          <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />
+        </Section>
       </div>
     );
   }
