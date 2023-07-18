@@ -1,4 +1,4 @@
-export { Section } from '';
+export { Section } from './Section';
 
 export const App = () => {
   return (
