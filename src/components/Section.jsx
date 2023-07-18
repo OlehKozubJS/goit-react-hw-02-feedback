@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export class Section extends Component {
+export class Feedback extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -77,6 +77,10 @@ export class FeedbackOptions extends Component {
       </div>
     )
   }
+}
+
+export class Section extends Component {
+
 }
 
 /*
