@@ -1,4 +1,5 @@
 import { Component } from "react";
+import propTypes from "prop-types";
 
 export class FeedbackOptions extends Component {
     renderOptionButtons = () => {
@@ -14,17 +15,8 @@ export class FeedbackOptions extends Component {
     }
 }
 
-/*
-FriendList.propTypes = {
-    friends: propTypes.arrayOf(
-        propTypes.shape(
-            {
-                avatar: propTypes.string.isRequired,
-                name: propTypes.string.isRequired,
-                isOnline: propTypes.bool.isRequired,
-                id: propTypes.number.isRequired,
-            }
-        )
-    ).isRequired,
+
+FeedbackOptions.propTypes = {
+    options: propTypes.arrayOf(propTypes.string.isRequired).isRequired,
+    onLeaveFeedback: propTypes.func.isRequired
 }
-*/
