@@ -12,16 +12,16 @@ export class Section extends Component {
   };
 
   render() {
-    const { isOpen } = this.state;
+    const { good, neutral, bad } = this.state;
     const { children } = this.props;
 
     return (
       <div>
         <div>
             <h2>Please leave feedback</h2>
-            <button onClick={}>Good</button>
-            <button onClick={}>Neutral</button>
-            <button onClick={}>Bad</button>
+            <button onClick={good}>Good</button>
+            <button onClick={neutral}>Neutral</button>
+            <button onClick={bad}>Bad</button>
         </div>
         <div>
             <h2>Statistics</h2>
