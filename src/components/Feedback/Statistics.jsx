@@ -1,4 +1,5 @@
 import { Component } from "react";
+import propTypes from "prop-types";
 
 export class Statistics extends Component {
     render() {
@@ -17,16 +18,13 @@ export class Statistics extends Component {
 }
 
 /*
-FriendList.propTypes = {
-    friends: propTypes.arrayOf(
-        propTypes.shape(
-            {
-                avatar: propTypes.string.isRequired,
-                name: propTypes.string.isRequired,
-                isOnline: propTypes.bool.isRequired,
-                id: propTypes.number.isRequired,
-            }
-        )
-    ).isRequired,
-}
+propTypes.string.isRequired,
 */
+
+Statistics.propTypes = {
+    good: propTypes.string.isRequired,
+    neutral: propTypes.string.isRequired,
+    bad: propTypes.string.isRequired,
+    total: propTypes.string.isRequired,
+    positivePercentage: propTypes.string.isRequired
+}
