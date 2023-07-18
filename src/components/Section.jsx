@@ -9,13 +9,13 @@ export class Section extends Component {
 
   changeStatistics = (event) => {
     if (event.target.className === "GoodButton") {
-      this.setState(state => ({good: state.good + 1}));
+      this.setState({good: this.state.good + 1});
     }
     if (event.target.className === "NeutralButton") {
       this.setState({neutral: this.state.neutral + 1});
     }
     if (event.target.className === "BadButton") {
-      this.setState(state => ({bad: state.bad + 1}));
+      this.setState({bad: this.state.bad + 1});
     }
   }
 /*
