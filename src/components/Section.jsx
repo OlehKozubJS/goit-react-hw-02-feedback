@@ -6,7 +6,7 @@ export class Section extends Component {
     neutral: 0,
     bad: 0
   };
-
+/*
   addGood = () => {this.state.good += 1};
   addNeutral = () => {this.addNeutral.neutral += 1};
   addBad = () => {this.addBad.bad += 1};
@@ -20,7 +20,7 @@ export class Section extends Component {
     const sum = this.countTotalFeedback();
     return Math.floor(this.state.good / sum * 100);
   };
-
+*/
   render() {
     const { good, neutral, bad } = this.state;
 
