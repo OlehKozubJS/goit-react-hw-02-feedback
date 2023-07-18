@@ -7,10 +7,22 @@ export class Section extends Component {
     bad: 0
   };
 
+  changeStatistics = (event) => {
+    if (event.target.className === "GoodButton") {
+      this.setState(state => ({good: state.good + 1}));
+    }
+    if (event.target.className === "NeutralButton") {
+      this.setState(state => ({neutral: state.neutral + 1}));
+    }
+    if (event.target.className === "BadButton") {
+      this.setState(state => ({bad: state.bad + 1}));
+    }
+  }
+/*
   addGood = () => this.setState(state => ({good: state.good + 1}));
   addNeutral = () => this.setState(state => ({neutral: state.neutral + 1}));
   addBad = () => this.setState(state => ({bad: state.bad + 1}));
-  
+*/
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
