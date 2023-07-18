@@ -38,23 +38,33 @@ export class Section extends Component {
 
     return (
       <div>
-        <div>
+        <div onClick={this.changeStatistics}>
             <h2>Please leave feedback</h2>
-            <button onClick={this.addGood}>Good</button>
-            <button onClick={this.addNeutral}>Neutral</button>
-            <button onClick={this.addBad}>Bad</button>
+            <button className="GoodButton">Good</button>
+            <button className="NeutralButton">Neutral</button>
+            <button className="BadButton">Bad</button>
         </div>
         <div>
             <h2>Statistics</h2>
-            <ul>
-                <li>Good: {good}</li>
-                <li>Neutral: {neutral}</li>
-                <li>Bad: {bad}</li>
-                <li>Total: {this.countTotalFeedback()}</li>
-                <li>Positive feedback: {this.countPositiveFeedbackPercentage()}%</li>
-            </ul>
+
         </div>
       </div>
+    );
+  }
+}
+
+export class Statistics extends Component {
+  render() {
+    const { good, neutral, bad, total, positivePercentage } = this.props;
+
+    return (
+      <ul>
+        <li>Good: {good}</li>
+        <li>Neutral: {neutral}</li>
+        <li>Bad: {bad}</li>
+        <li>Total: {total}</li>
+        <li>Positive feedback: {positivePercentage}%</li>
+      </ul>
     );
   }
 }
