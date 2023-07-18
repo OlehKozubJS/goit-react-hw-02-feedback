@@ -15,7 +15,11 @@ export class Section extends Component {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
   };
-  countPositiveFeedbackPercentage();
+  
+  countPositiveFeedbackPercentage = () => {
+    const sum = this.countTotalFeedback;
+    return Math.floor(this.state.good / sum * 100);
+  };
 
   toggle = () => {
     this.setState(state => ({ isOpen: !state.isOpen }));
@@ -28,9 +32,9 @@ export class Section extends Component {
       <div>
         <div>
             <h2>Please leave feedback</h2>
-            <button onClick={addGood}>Good</button>
-            <button onClick={addNeutral}>Neutral</button>
-            <button onClick={addBad}>Bad</button>
+            <button onClick={this.addGood}>Good</button>
+            <button onClick={this.addNeutral}>Neutral</button>
+            <button onClick={this.addBad}>Bad</button>
         </div>
         <div>
             <h2>Statistics</h2>
@@ -38,8 +42,8 @@ export class Section extends Component {
                 <li>Good: {good}</li>
                 <li>Neutral: {neutral}</li>
                 <li>Bad: {bad}</li>
-                <li>Total:</li>
-                <li>Positive feedback: </li>
+                <li>Total: {this.countTotalFeedback}</li>
+                <li>Positive feedback: {this.countPositiveFeedbackPercentage}%</li>
             </ul>
         </div>
       </div>
