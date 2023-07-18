@@ -7,7 +7,6 @@ export class Section extends Component {
     bad: 0
   }
 
-
   addGood = () => {this.state.good += 1};
   addNeutral = () => {this.addNeutral.neutral += 1};
   addBad = () => {this.addBad.bad += 1};
