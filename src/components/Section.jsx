@@ -13,7 +13,9 @@ export class Section extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    
+
+    countTotalFeedback();
+    countPositiveFeedbackPercentage();
 
     return (
       <div>
@@ -26,11 +28,11 @@ export class Section extends Component {
         <div>
             <h2>Statistics</h2>
             <ul>
-                <li>Good</li>
-                <li>Neutral</li>
-                <li>Bad</li>
-                <li>Total</li>
-                <li>Positive feedback</li>
+                <li>Good: {good}</li>
+                <li>Neutral: {neutral}</li>
+                <li>Bad: {bad}</li>
+                <li>Total:</li>
+                <li>Positive feedback: </li>
             </ul>
         </div>
       </div>
