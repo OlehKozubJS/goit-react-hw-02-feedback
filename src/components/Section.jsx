@@ -46,7 +46,7 @@ export class Section extends Component {
         </div>
         <div>
             <h2>Statistics</h2>
-
+            <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />
         </div>
       </div>
     );
