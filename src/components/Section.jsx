@@ -7,6 +7,14 @@ export class Section extends Component {
     bad: 0
   }
 
+
+  addGood = () => {this.state.good += 1};
+  addNeutral = () => {this.addNeutral.neutral += 1};
+  addBad = () => {this.addBad.bad += 1};
+    
+  countTotalFeedback();
+  countPositiveFeedbackPercentage();
+
   toggle = () => {
     this.setState(state => ({ isOpen: !state.isOpen }));
   };
@@ -14,16 +22,13 @@ export class Section extends Component {
   render() {
     const { good, neutral, bad } = this.state;
 
-    countTotalFeedback();
-    countPositiveFeedbackPercentage();
-
     return (
       <div>
         <div>
             <h2>Please leave feedback</h2>
-            <button onClick={good}>Good</button>
-            <button onClick={neutral}>Neutral</button>
-            <button onClick={bad}>Bad</button>
+            <button onClick={addGood}>Good</button>
+            <button onClick={addNeutral}>Neutral</button>
+            <button onClick={addBad}>Bad</button>
         </div>
         <div>
             <h2>Statistics</h2>
