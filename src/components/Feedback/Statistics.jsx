@@ -17,10 +17,6 @@ export class Statistics extends Component {
     }
 }
 
-/*
-propTypes.string.isRequired,
-*/
-
 Statistics.propTypes = {
     good: propTypes.number.isRequired,
     neutral: propTypes.number.isRequired,
