@@ -78,14 +78,14 @@ export class FeedbackOptions extends Component {
 }
 
 export class Section extends Component {
-  render() {
-    return(
-      <div>
-        <h2>{this.props.title}</h2>
-        {this.props.children}
-      </div>
-    );
-  }
+    render() {
+        return(
+            <div>
+                <h2>{this.props.title}</h2>
+                {this.props.children}
+            </div>
+        );
+    }
 }
 
 /*
