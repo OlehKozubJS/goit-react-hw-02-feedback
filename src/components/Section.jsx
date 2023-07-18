@@ -11,7 +11,10 @@ export class Section extends Component {
   addNeutral = () => {this.addNeutral.neutral += 1};
   addBad = () => {this.addBad.bad += 1};
     
-  countTotalFeedback();
+  countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
+  };
   countPositiveFeedbackPercentage();
 
   toggle = () => {
