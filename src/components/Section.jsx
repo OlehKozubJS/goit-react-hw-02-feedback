@@ -12,7 +12,7 @@ export class Section extends Component {
       this.setState(state => ({good: state.good + 1}));
     }
     if (event.target.className === "NeutralButton") {
-      this.setState(state => ({neutral: state.neutral + 1}));
+      this.setState({neutral: this.state.neutral + 1});
     }
     if (event.target.className === "BadButton") {
       this.setState(state => ({bad: state.bad + 1}));
@@ -38,8 +38,9 @@ export class Section extends Component {
 
     return (
       <div>
-        <div onClick={this.changeStatistics}>
+        <div>
             <h2>Please leave feedback</h2>
+
             <FeedbackOptions options={["Good", "Bad", "Neutral"]} onLeaveFeedback={this.changeStatistics} />
         </div>
         <div>
@@ -68,21 +69,17 @@ export class Statistics extends Component {
 }
 
 export class FeedbackOptions extends Component {
-  state = {
-    optionButtons: []
-  };
-
   constructor(props) {
     super(props);
     this.state = {optionButtons: this.props.options.map((option, index) => <button className={option.replaceAll(" ", "") + "Button"} key={index}>{option}</button>)};
   }
 
   render() {
-    const { onLeaveFeedback } = this.props;
+    //const { onLeaveFeedback } = this.props;
     const { optionButtons } = this.state;
 
     return (
-      <div onClick={onLeaveFeedback}>
+      <div onClick={this.props.onLeaveFeedback}>
         {optionButtons}
       </div>
     )
