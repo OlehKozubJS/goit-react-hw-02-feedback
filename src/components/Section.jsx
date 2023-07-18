@@ -72,9 +72,9 @@ export class FeedbackOptions extends Component {
     optionButtons: []
   };
 
-  constructor(props, state) {
-    super(props, state);
-    this.setState({optionButtons: this.props.options.map(option => <button className={option.replaceAll(" ", "") + "Button"}>{option}</button>)});
+  constructor(props) {
+    super(props);
+    this.state = {optionButtons: this.props.options.map((option, index) => <button className={option.replaceAll(" ", "") + "Button"} key={index}>{option}</button>)};
   }
 
   render() {
