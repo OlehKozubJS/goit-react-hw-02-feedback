@@ -11,20 +11,6 @@
     align-items: center;
 }
 
-.contactFormInputHeader {
-    color: rgb(130, 170, 190);
-}
-
-.contactFormInput {
-    border: 1px solid rgb(190, 210, 230);
-    background-color: rgb(245, 250, 255);
-    color: rgb(130, 170, 190);
-}
-
-.contactFormInput:focus-within {
-    border: 5px double rgb(170, 190, 210);
-}
-
 .contactFormSubmitButton {
     border: 1px solid rgb(190, 210, 230);
     background-color: rgb(230, 240, 250);
