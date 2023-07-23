@@ -38,5 +38,5 @@ button {
 }
 
 button:active {
-    border-radius: 50px 0 50px 0;
+    border-radius: 25px 0 25px 0;
 }
