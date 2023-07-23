@@ -40,7 +40,7 @@ export class Feedback extends Component {
         return (
             <div className={FeedbackStyles.feedback}>
                 <Section title="Please leave feedback">
-                    <FeedbackOptions options={["Good", "Bad", "Neutral"]} onLeaveFeedback={this.changeStatistics} />
+                    <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.changeStatistics} />
                 </Section>
   
                 <Section title="Statistics">
