@@ -1,4 +1,4 @@
-.Statistics {
+.statistics {
     width: 100%;
 
     list-style: none;
@@ -11,7 +11,7 @@
     align-items: center;
 }
 
-.StatisticsItem {
+.statisticsItem {
     box-sizing: border-box;
     width: 100%;
     border-radius: 0 25px 0 25px;
@@ -22,7 +22,7 @@
     font-size: 25px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: rgb(130, 130, 190);
 }
