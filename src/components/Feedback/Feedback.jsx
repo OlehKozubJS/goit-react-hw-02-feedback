@@ -3,6 +3,7 @@ import { Section } from "./Section";
 import { FeedbackOptions } from "./FeedbackOptions";
 import { Statistics } from "./Statistics";
 import { Notification } from "./Notification";
+import FeedbackStyles from "./FeedbackCSS/Feedback.module.css";
 
 export class Feedback extends Component {
     state = {
