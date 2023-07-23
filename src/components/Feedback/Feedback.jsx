@@ -13,13 +13,13 @@ export class Feedback extends Component {
     };
   
     changeStatistics = (event) => {
-        if (event.target.className === "GoodButton") {
+        if (event.target.dataset.id === "Good") {
             this.setState({good: this.state.good + 1});
         }
-        if (event.target.className === "NeutralButton") {
+        if (event.target.dataset.id === "Neutral") {
             this.setState({neutral: this.state.neutral + 1});
         }
-        if (event.target.className === "BadButton") {
+        if (event.target.dataset.id === "Bad") {
             this.setState({bad: this.state.bad + 1});
         }
     }
