@@ -10,7 +10,7 @@ export class FeedbackOptions extends Component {
                     className={FeedbackOptionsStyles.feedbackOptionsButton}
                     data-id={option}
                     key={index}
-                    onClick={this.props.onLeaveFeedback}
+                    onClick={() => this.props.onLeaveFeedback(option)}
                 >
                     {option}
                 </button>
