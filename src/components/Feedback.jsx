@@ -12,16 +12,8 @@ export class Feedback extends Component {
         bad: 0
     };
   
-    changeStatistics = (event) => {
-        if (event.target.dataset.id === "Good") {
-            this.setState({good: this.state.good + 1});
-        }
-        if (event.target.dataset.id === "Neutral") {
-            this.setState({neutral: this.state.neutral + 1});
-        }
-        if (event.target.dataset.id === "Bad") {
-            this.setState({bad: this.state.bad + 1});
-        }
+    changeStatistics = option => {
+        this.setState(state => ({[option]: state[option] + 1}));
     }
   
     countTotalFeedback = () => {
