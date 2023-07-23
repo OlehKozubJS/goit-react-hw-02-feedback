@@ -1,16 +1,13 @@
-import { Component } from "react";
 import propTypes from "prop-types";
 import SectionStyles from "./FeedbackCSS/Section.module.css";
 
-export class Section extends Component {
-    render() {
-        return(
-            <div >
-                <h2 className={SectionStyles.sectionHeader}>{this.props.title}</h2>
-                {this.props.children}
-            </div>
-        );
-    }
+export const Section = ({title}) => {
+    return(
+        <div >
+            <h2 className={SectionStyles.sectionHeader}>{title}</h2>
+            {this.props.children}
+        </div>
+    );
 }
 
 Section.propTypes = {
