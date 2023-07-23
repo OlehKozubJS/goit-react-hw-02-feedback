@@ -10,7 +10,7 @@ export class Feedback extends Component {
         good: 0,
         neutral: 0,
         bad: 0
-    };
+    }
   
     changeStatistics = option => {
         this.setState(state => ({[option]: state[option] + 1}));
@@ -19,12 +19,12 @@ export class Feedback extends Component {
     countTotalFeedback = () => {
         const { good, neutral, bad } = this.state;
         return good + neutral + bad;
-    };
+    }
     
     countPositiveFeedbackPercentage = () => {
         const sum = this.countTotalFeedback();
         return Math.floor(this.state.good / sum * 100);
-    };
+    }
   
     render() {
         const { good, neutral, bad } = this.state;
