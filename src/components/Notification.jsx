@@ -1,13 +1,10 @@
-import { Component } from "react";
 import propTypes from "prop-types";
 import NotificationStyles from "./FeedbackCSS/Notification.module.css"
 
-export class Notification extends Component {
-    render() {
-        return(
-            <p className={NotificationStyles.notification}>{this.props.message}</p>
-        );
-    }
+export const Notification = ({message}) => {
+    return(
+        <p className={NotificationStyles.notification}>{message}</p>
+    );
 }
 
 Notification.propTypes = {
