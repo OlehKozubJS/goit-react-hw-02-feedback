@@ -1,5 +1,6 @@
 import { Component } from "react";
 import propTypes from "prop-types";
+import FeedbackOptionsStyles from "./FeedbackCSS/FeedbackOptions.module.css";
 
 export class FeedbackOptions extends Component {
     renderOptionButtons = () => {
