@@ -30,7 +30,9 @@ h3 {
 
 button {
     display: block;
+    box-sizing: border-box;
     height: 35px;
+    width: 150px;
     border-radius: 0 25px 0 25px;
     padding-inline: 25px;
     font-family: 'Lugrasimo', cursive;
