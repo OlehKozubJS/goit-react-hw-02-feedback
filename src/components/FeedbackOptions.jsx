@@ -2,28 +2,24 @@ import { Component } from "react";
 import propTypes from "prop-types";
 import FeedbackOptionsStyles from "./FeedbackCSS/FeedbackOptions.module.css";
 
-export class FeedbackOptions extends Component {
-    renderOptionButtons = () => {
-        return this.props.options.map(
-            (option, index) =>
-                <button
-                    className={FeedbackOptionsStyles.feedbackOptionsButton}
-                    data-id={option}
-                    key={index}
-                    onClick={() => this.props.onLeaveFeedback(option)}
-                >
-                    {option.replace(option[0], option[0].toUpperCase())}
-                </button>
-        );
-    }
-  
-    render() {
-        return (
-            <div className={FeedbackOptionsStyles.feedbackOptions}>
-                {this.renderOptionButtons()}
-            </div>
-        )
-    }
+export const FeedbackOptions = ({options, onLeaveFeedback}) => {
+    return (
+        <div className={FeedbackOptionsStyles.feedbackOptions}>
+            {
+                options.map(
+                    (option, index) =>
+                        <button
+                            className={FeedbackOptionsStyles.feedbackOptionsButton}
+                            data-id={option}
+                            key={index}
+                            onClick={() => onLeaveFeedback(option)}
+                        >
+                            {option.replace(option[0], option[0].toUpperCase())}
+                        </button>
+                )
+            }
+        </div>
+    )
 }
 
 FeedbackOptions.propTypes = {
