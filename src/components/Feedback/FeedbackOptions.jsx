@@ -4,7 +4,7 @@ import FeedbackOptionsStyles from "./FeedbackCSS/FeedbackOptions.module.css";
 
 export class FeedbackOptions extends Component {
     renderOptionButtons = () => {
-        return this.props.options.map((option, index) => <button className={option.replaceAll(" ", "") + "Button"} key={index}>{option}</button>);
+        return this.props.options.map((option, index) => <button className={`${option.replaceAll(" ", "") + "Button"} ${FeedbackOptionsStyles.feedbackOptionsButton}`} key={index}>{option}</button>);
     }
   
     render() {
