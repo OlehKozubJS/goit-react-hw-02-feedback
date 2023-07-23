@@ -40,7 +40,10 @@ export class Feedback extends Component {
         return (
             <div className={FeedbackStyles.feedback}>
                 <Section title="Please leave feedback">
-                    <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.changeStatistics} />
+                    <FeedbackOptions
+                        options={Object.keys(this.state)}
+                        onLeaveFeedback={this.changeStatistics}
+                    />
                 </Section>
   
                 <Section title="Statistics">
@@ -48,7 +51,13 @@ export class Feedback extends Component {
                     this.countTotalFeedback() === 0 ?
                     <Notification message="There is no feedback" />
                     :
-                    <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()} />
+                    <Statistics
+                        good={good}
+                        neutral={neutral}
+                        bad={bad}
+                        total={this.countTotalFeedback()}
+                        positivePercentage={this.countPositiveFeedbackPercentage()}
+                    />
                     }
                 </Section>
             </div>
