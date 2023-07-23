@@ -1,7 +1,7 @@
 import propTypes from "prop-types";
 import StatisticsStyles from "./FeedbackCSS/Statistics.module.css";
 
-export const Statistics = { good, neutral, bad, total, positivePercentage } => {
+export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     return (
         <ul className={StatisticsStyles.statistics}>
             <li className={StatisticsStyles.statisticsItem}>Good: {good}</li>
