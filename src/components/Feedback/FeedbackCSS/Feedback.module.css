@@ -8,20 +8,6 @@ body {
     width: 500px;
 }
 
-.phonebookHeader {
-    text-align: center;
-    font-family: 'Lugrasimo', cursive;
-    font-size: 35px;
-    color: rgb(170, 130, 190);
-}
-
-.contactsHeader {
-    text-align: center;
-    font-family: 'Lugrasimo', cursive;
-    font-size: 30px;
-    color: rgb(170, 130, 130);
-}
-
 h3 {
     margin: 0;
     font-family: 'Lugrasimo', cursive;
