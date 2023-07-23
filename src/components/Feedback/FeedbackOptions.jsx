@@ -9,7 +9,7 @@ export class FeedbackOptions extends Component {
   
     render() {
         return (
-            <div onClick={this.props.onLeaveFeedback}>
+            <div className={FeedbackOptionsStyles.feedbackOptions} onClick={this.props.onLeaveFeedback}>
                 {this.renderOptionButtons()}
             </div>
         )
